@@ -21,14 +21,14 @@ const LoginPage = ({ setIsAuthenticated }) => {
       const data = await response.json();
 
       if (response.ok && data.token) {
-        localStorage.setItem("token", data.token); // Store JWT token
-        setIsAuthenticated(true); // Update authentication state
-        navigate("/products"); // Redirect to product listing page
+        localStorage.setItem("token", data.token);
+        setIsAuthenticated(true);
+        navigate("/products");
       } else {
         throw new Error("Invalid credentials");
       }
     } catch (err) {
-      setError("Invalid credentials"); // Display a user-friendly error message
+      setError("Invalid credentials");
     }
   };
 
@@ -50,6 +50,9 @@ const LoginPage = ({ setIsAuthenticated }) => {
           onChange={(e) => setPassword(e.target.value)}
           required
         />
+        <p className="credentials">
+           <strong>Username:</strong> mor_2314, <strong>Password:</strong> 83r5^_
+        </p>
         <button type="submit">Login</button>
         {error && <p className="error">{error}</p>}
       </form>

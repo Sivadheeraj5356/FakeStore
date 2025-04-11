@@ -1,8 +1,7 @@
-/* General Reset */
 body {
   margin: 0;
-  font-family: 'Inter', sans-serif; /* Modern font */
-  background-color: #f4f4f9; /* Light background */
+  font-family: 'Inter', sans-serif; 
+  background-color: #f4f4f9; 
   color: #333;
   line-height: 1.6;
 }
@@ -36,7 +35,6 @@ button:active {
   transform: scale(0.98);
 }
 
-/* Header */
 .header {
   display: flex;
   justify-content: space-between;
@@ -58,23 +56,21 @@ button:active {
   color: #d1e8ff;
 }
 
-/* Login Page */
 .login-page {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: white; /* Keep the background white */
+  background: white; 
 }
 
-/* Login Form */
 .login-form {
   max-width: 400px;
   width: 100%;
   padding: 30px;
   background: white;
   border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for a clean look */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
   text-align: center;
 }
 
@@ -127,7 +123,6 @@ button:active {
   margin-top: 10px;
 }
 
-/* Password Container */
 .password-container {
   position: relative;
   display: flex;
@@ -136,7 +131,7 @@ button:active {
 
 .password-container input {
   flex: 1;
-  padding-right: 40px; /* Add space for the toggle button */
+  padding-right: 40px; 
 }
 
 .toggle-password {
@@ -156,7 +151,6 @@ button:active {
   color: #0056b3;
 }
 
-/* Filters */
 .filters {
   display: flex;
   justify-content: space-between;
@@ -181,7 +175,6 @@ button:active {
   margin-left: 10px;
 }
 
-/* Product Grid */
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -201,7 +194,7 @@ button:active {
 .product-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-  cursor: pointer; /* Add this line */
+  cursor: pointer; 
 }
 
 .product-card img {
@@ -236,7 +229,7 @@ button:active {
   background-color: #0056b3;
 }
 
-/* Cart Page */
+
 .cart-page {
   padding: 30px;
 }
@@ -244,18 +237,18 @@ button:active {
 .cart-item {
   display: flex;
   align-items: center;
-  margin-bottom: 25px;
-  background: white;
+  gap: 20px;
   padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .cart-item img {
   width: 100px;
   height: 100px;
-  margin-right: 20px;
-  border-radius: 8px;
+  object-fit: contain;
 }
 
 .cart-item div {
@@ -295,7 +288,6 @@ button:active {
   background-color: #cc0000;
 }
 
-/* Popup */
 .popup {
   margin-top: 20px;
   padding: 15px;
@@ -320,7 +312,6 @@ button:active {
   }
 }
 
-/* Product Detail Page */
 .product-detail {
   padding: 40px;
   text-align: center;
@@ -353,12 +344,12 @@ button:active {
 
 .product-detail-image {
   width: 100%;
-  max-width: 300px; /* Limit the width of the image */
-  max-height: 300px; /* Limit the height of the image */
-  object-fit: contain; /* Ensure the image scales proportionally */
-  margin: 0 auto; /* Center the image */
+  max-width: 300px; 
+  max-height: 300px; 
+  object-fit: contain; 
+  margin: 0 auto; 
   background-color: #f9f9f9;
-  border-radius: 10px; /* Add rounded corners for a modern look */
+  border-radius: 10px;
 }
 
 .product-detail-info {
@@ -425,4 +416,54 @@ button:active {
 
 .product-detail button:hover {
   background-color: #0056b3;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.quantity-controls button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.quantity-controls button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+quantity-controls button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.quantity-controls span {
+  min-width: 30px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.quantity-controls button:last-child {
+  background-color: #ff4d4d;
+  margin-left: 10px;
+}
+
+.quantity-controls button:last-child:hover {
+  background-color: #cc0000;
+}
+
+.quantity-controls input {
+  width: 50px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
 }

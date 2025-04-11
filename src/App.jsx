@@ -23,6 +23,22 @@ const App = () => {
     });
   };
 
+  const updateCart = (id, quantity) => {
+    setCart(prevCart =>
+      prevCart.map(item =>
+        item.id === id ? { ...item, quantity } : item
+      )
+    );
+  };
+
+  const removeFromCart = (id) => {
+    setCart(prevCart => prevCart.filter(item => item.id !== id));
+  };
+
+  const clearCart = () => {
+    setCart([]);
+  };
+
   useEffect(() => {
     setIsAuthenticated(!!localStorage.getItem("token"));
   }, []);
@@ -53,7 +69,9 @@ const App = () => {
             isAuthenticated ? (
               <CartPage
                 cart={cart}
-                clearCart={() => setCart([])}
+                setCart={setCart}
+                removeFromCart={removeFromCart}
+                clearCart={clearCart}
               />
             ) : (
               <Navigate to="/" />

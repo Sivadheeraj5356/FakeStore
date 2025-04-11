@@ -7,7 +7,7 @@ const ProductCard = ({ product, onClick, addToCart }) => {
       <h3>{product.title}</h3>
       <p>${product.price.toFixed(2)}</p>
       <button onClick={(e) => {
-        e.stopPropagation(); // Prevent navigation on button click
+        e.stopPropagation(); 
         addToCart(product);
       }}>
         Add to Cart

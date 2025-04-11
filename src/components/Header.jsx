@@ -5,9 +5,9 @@ const Header = ({ cartCount, setIsAuthenticated }) => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    localStorage.removeItem("token"); // Clear JWT token
-    setIsAuthenticated(false); // Update authentication state
-    navigate("/"); // Redirect to Login page
+    localStorage.removeItem("token"); 
+    setIsAuthenticated(false); 
+    navigate("/"); 
   };
 
   return (
